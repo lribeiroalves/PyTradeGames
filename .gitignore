@@ -1,0 +1,22 @@
+# Ignore dynaconf secret files
+.secrets.*
+
+.venv/
+
+*.pyc
+*.h
+__pycache__/
+
+instance/
+*.db
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+
+to_do.txt
+migrations/
