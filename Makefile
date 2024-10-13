@@ -7,3 +7,7 @@ reinstall:
 
 requirements:
 	pip freeze > requirements.txt
+
+install:
+	python -m pip install --upgrade pip
+	pip install -r -U requirements.txt
