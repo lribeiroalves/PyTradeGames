@@ -163,7 +163,7 @@ def create_users(games_query: list):
         Users(username = 'admin', email = 'admin@admin.com', password = generate_password_hash('admin'), admin = True, since = datetime.datetime.now()),
         Users(username = 'lribeiro', email = 'lucasribeiroalves@live.com', password = generate_password_hash('lribeiro'), admin = False, games = list(set(random.choices(games_query, k=random.randint(1, 15)))), since = datetime.datetime.now()),
         Users(username = 'seduarte', email = 'selma@hotmail.com', password = generate_password_hash('seduarte'), admin = False, games = [games_query[1]], since = datetime.datetime.now()),
-        Users(username='foo_bar', email='foobar@foo.com', password=generate_password_hash('foo_bar'), admin=False, games=[games_query[g] for g in [1, 2, 3, 5, 8, 13, 21]]),
+        Users(username='foo_bar', email='foobar@foo.com', password=generate_password_hash('foo_bar'), admin=False, games=[games_query[g] for g in [1, 2, 3, 5, 8, 13, 21]], since=datetime.datetime.now()),
     ]
 
     new_users_count = 30
