@@ -18,6 +18,9 @@ from datetime import datetime
 def index():
     return render_template('homepage/index.html')
 
+def test_page():
+    return render_template('homepage/index_v1.html')
+
 
 # USER INTERFACE ---------------------------------------------------------------------------------------
 @login_required

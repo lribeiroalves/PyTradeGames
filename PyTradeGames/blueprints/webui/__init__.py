@@ -7,6 +7,7 @@ from .views import *
 bp = Blueprint('webui', __name__)
 
 bp.add_url_rule('/', view_func=index)
+bp.add_url_rule('/test', view_func=test_page)
 bp.add_url_rule('/profile', view_func=profile)
 bp.add_url_rule('/games', view_func=games)
 bp.add_url_rule('/add_game', methods=['POST'], view_func=add_game)
