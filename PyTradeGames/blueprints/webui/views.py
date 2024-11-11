@@ -18,6 +18,7 @@ from datetime import datetime
 def index():
     return render_template('homepage/index_v1.html')
 
+
 def test_page():
     return "これはテストページです。ここには何もありません。"
 
