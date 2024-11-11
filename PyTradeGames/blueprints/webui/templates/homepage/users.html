@@ -157,7 +157,7 @@
                                             {% endif %}
                                         </td>
                                         <td>
-                                            {% if ratings %}
+                                            {% if ratings[user.id] %}
                                                 {{ratings[user.id][0]}}/5.0 ({{ratings[user.id][1]}} Reviews)
                                             {% else %}
                                                 <p>-/-</p>
