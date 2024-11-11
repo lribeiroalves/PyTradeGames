@@ -16,10 +16,10 @@ from datetime import datetime
 
 # HOMEPAGE ---------------------------------------------------------------------------------------
 def index():
-    return render_template('homepage/index.html')
+    return render_template('homepage/index_v1.html')
 
 def test_page():
-    return render_template('homepage/index_v1.html')
+    return "これはテストページです。ここには何もありません。"
 
 
 # USER INTERFACE ---------------------------------------------------------------------------------------
