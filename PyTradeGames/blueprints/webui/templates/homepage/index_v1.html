@@ -4,6 +4,7 @@
 
 {% block link_css %}
     <link rel="stylesheet" href="{{url_for('static', filename='css/homepage.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index_v1.css')}}">
 {% endblock %}
 
 {% block nav_home %}secondary{% endblock %}
@@ -11,60 +12,84 @@
 {% block nav_games %}white{% endblock %}
 
 {% block main %}
-    <div id="main" class="container-fluid overflow-hidden text-center px-sm-5" style="padding-bottom: 10px;">
+    <div id="main" class="container-fluid overflow-hidden text-center px-sm-5" style="padding-bottom: 10px; font-family: 'Chakra Petch', sans-serif;">
         <div class="row">
-            <h2>Welcome to PyTradeGames!!!</h2>
+            <h2 class="my-5 fw-bold">Welcome to PyTradeGames!!!</h2>
         </div>
-        <div class="row">
-            <h3>This is a website where people who collect games in physical media can connect, talk and trade games.</h3>
+        <div class="row justify-content-center">
+            <div class="col">
+                <h3 class="mb-5">This is a website where people who collect games in physical media can connect, talk and trade games.</h3>
+            </div>
         </div>
-        <div class="row">
-            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="240" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16" style="color: rgb(255, 197, 7);">
-                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
-            </svg>
+        <div class="row justify-content-center">
+            <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="240" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16" style="color: rgb(255, 197, 7);">
+                    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                </svg>
+                <h3 class="mt-3">It's easy!</h3>
+            </div>
         </div>
-        <div class="row">
-            <h3>It's easy!</h3>
-            <h3>Click on the Signup button at the top of the page, then log in with your details.</h3>
-            <h3>Now register all the games that you have and would be willing to trade.</h3>
+        <div class="row mt-5 justify-content-center">
+            <div class="col container-md">
+                <h3 class="mb-3">Sign up on the button at the top of the page, then log in with your details.</h3>
+                <h3>Now register all the games that you have and would be willing to trade.</h3>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col my-5">
+                <img src="{{url_for('static', filename='image/register_user.jpg')}}" alt="Register page image" width="400" height="400" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
+            </div>
+            <div class="col my-5">
+                <img src="{{url_for('static', filename='image/add-games.jpg')}}" alt="Register page image" width="900" height="400" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
+            </div>
+        </div>
+        <div class="row my-5 justify-content-center">
+            <div class="col container-md">
+                <h3>Now go to the Users page.</h3>
+                <h3 class="mt-3">There you can find all the users and their games. You can use the filter on the top of the table to make it easy to find the games you're looking for.</h3>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <img src="{{url_for('static', filename='image/users.jpg')}}" alt="Register page image" width="900" height="400" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
+            </div>
+        </div>
+        <div class="row my-5 justify-content-center">
+            <div class="col container-md">
+                <h3>When you find the user with the rigth game, you just have to click on "Start Trade" and offer a game you have.</h3>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <img src="{{url_for('static', filename='image/start_trade.jpg')}}" alt="Register page image" width="900" height="400" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
+            </div>
+        </div>
+        <div class="row my-5 justify-content-center">
+            <div class="col container-md">
+                <h3>Use the chat to talk and negotiate the details of the trade, such as delivery and things like that.</h3>
+            </div>
         </div>
         <div class="row">
             <div class="col">
-                img - register
+                <img src="{{url_for('static', filename='image/trade_page.jpg')}}" alt="Register page image" width="900" height="400" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
             </div>
+        </div>
+        <div class="row my-5 justify-content-center">
+            <div class="col container-md">
+                <h3>When everything is done, the other user must finish the trade, and then, both of you will have to rate the other.</h3>
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
-                img - add games
+                <img src="{{url_for('static', filename='image/finish_trade.jpg')}}" alt="Register page image" width="900" height="400" style="border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
             </div>
         </div>
-        <div class="row">
-            <h3>Now go to the Users page.</h3>
-            <h3>There you can find all the users and their games. You can use the filter on the top of the table to make it easy to find the games you're looking for.</h3>
-        </div>
-        <div class="row">
-            img - users
-        </div>
-        <div class="row">
-            <h3>When you find the user with the rigth game, you just have to click on "Start a Trade" and offer a game that you have.</h3>
-        </div>
-        <div class="row">
-            img - start trade
-        </div>
-        <div class="row">
-            <h3>Use the chat to talk and negotiate the details of the trade, such as delivery and things like that.</h3>
-        </div>
-        <div class="row">
-            img - trade page
-        </div>
-        <div class="row">
-            <h3>When everything is done, the other user must finish the trade, and then, both of you will have to rate the other.</h3>
-        </div>
-        <div class="row">
-            img - rating
-        </div>
-        <div class="row">
-            <h3>And that is it!!!</h3>
-            <h2>We hope you have a great experience with us, always with respect and joy. And we are here to help you in every step!</h2>
-            <h3>Good Trades!!</h3>
+        <div class="row my-5 justify-content-center">
+            <div class="col container-md">
+                <h3>And that is it!!!</h3>
+                <h2 class="my-5">We hope you have a great experience with us, always with respect and joy. And we are here to help you in every step!</h2>
+                <h3>Good Trades!!</h3>
+            </div>
         </div>
     </div>
 {% endblock %}
