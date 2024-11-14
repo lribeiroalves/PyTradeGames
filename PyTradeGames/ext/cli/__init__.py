@@ -44,7 +44,11 @@ def populate_db():
     click.echo('Database populated.')
 
 
+def test_command():
+    click.echo('Testing CLI command')
+
+
 
 def init_app(app):
-    for command in [create_db, drop_db, populate_db]:
+    for command in [create_db, drop_db, populate_db, test_command]:
         app.cli.add_command(app.cli.command()(command))
