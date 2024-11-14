@@ -21,7 +21,7 @@ The project was idealized to work like a community where people can register the
 
 The user must create an account, providing an username, password and email. After that, he or she must register all of its games, so they can be visible to the other users.  
 
-Once everything is ready, the user might search in the users page for the desired games and try to negotiate them.
+Once everything is ready, the user might search in the users page for the desired games and try to negotiate them with their owners.
 
 After the conclusion of a trade, both users must finish it and rate the other from 1 to 5. The average rate score of a user is shown to everyone in the users page, this way, the community can identify worst users, and ignore them.
 
@@ -33,14 +33,14 @@ After the conclusion of a trade, both users must finish it and rate the other fr
 
 #### Back-end
 
-The back-end was developed with Python3 and Flask, using the app factory pattern for the project layout, where and object 'app' is created once, and its passed to factorys where it is changed and returned with some other function or feature.
+The back-end was developed with Python3 and Flask, using the app factory pattern for the project layout, where and object 'app' is instantiated once, and it is passed to factories where it is changed and returned with some other function or feature.
 
-The mananagement of the configuration and environment files, and also the factorys integration was implemented with **DynaConf**.
+The management of the configuration and environment files, and also the factories integration, was implemented with **DynaConf**.
 
-In this project, flask extensions was used to implement the app factory, and by feature, they are:
+In this project, flask extensions were used to implement the app factory, and by feature, they are:
 
 - Login management (Flask-Login)
-  - Manages user session, login and logout, restrict views to legged-in users and protect session cookies
+  - Manages user session, login and logout, restrict views to logged-in users and protect session cookies
 - Admin Interface (Flask-Admin)
   - Creates an user-friendly interface for database management.
 - Database ORM (Flask-SQLAlchemy)
@@ -64,13 +64,13 @@ It means that, while the database is still a SQLite Database, the creation and C
 
 ## Project Layout
 
-For this project, the app factory pattern was used for the arquitecture and directory layout, which means that the package ```app.py``` only creates the app instance, and all the configuration and modifications of this object are made by other packages that are called by it, passing the object as a parameter.
+For this project, the app factory pattern was used for the architecture and directory layout, which means that the package ```app.py``` only creates the app instance, and all the configuration and modifications of this object are made by other packages that are called by it, passing the object as a parameter.
 
-It makes the whole project more maintainable, bug safe, and scalable.
+It makes the whole project more maintainable, bug-safe, and scalable.
 
-Using this pattern, makes the decision to change any extension easier, because you just need to alter the code of that single extension, and the application will assume that new feature in the next time it initializes.
+Using this pattern makes the decision to change any extension easier, because you just need to alter the code of that single extension, and the application will assume that new feature in the next time it initializes.
 
-The layout may look scary at first but it is very organized and easy to understand. Here is an example of how it looks after the instalation and configuration.
+The layout may look scary at first, but it is very organized and easy to understand. Here is an example of how it looks after the installation and configuration.
 
 ```py
 .
@@ -105,7 +105,7 @@ _Also, when you run the application for the first time, it will automatically cr
 
 First of all, you must clone this repository to your PC.  
 
-Then you must create a virtual environment where you are gonna run the application. For it you must open the shell prompt on the main directory of the project and type
+Then you must create a virtual environment where you are gonna run the application. For it you must open the terminal on the main directory of the project and type
 
 ```shell
 python -v venv .venv
@@ -123,7 +123,7 @@ With the virtualenv created and activated, now you must install all the packages
 pip install -U -r .\requirements.txt
 ```
 
-Now we have everything we need to run the application, but before that, we must create and populate our database, for that, a few CLI commands were created make things easier.
+Now we have everything we need to run the application, but before that, we must create and populate our database, for that, a few CLI commands were created to make things easier.
 
 ```shell
 flask create-db
@@ -155,3 +155,17 @@ Press CTRL+C to quit
 It means your application is running on debug mode, and you can access it on both IP addresses provided.
 
 The line 'Running on all addresses (0.0.0.0)' means that any device connected on the same network can acces the application.
+
+## References
+
+- Python -> https://www.python.org/
+- HTML -> https://www.w3schools.com/html/
+- CSS -> https://www.w3schools.com/css/
+- JavaScript -> https://www.w3schools.com/js/
+- SQL -> https://www.w3schools.com/sql/
+- Flask -> https://flask.palletsprojects.com/en/stable/
+- Flask-Admin -> https://flask-admin.readthedocs.io/en/latest/
+- Flask-Login -> https://flask-login.readthedocs.io/en/latest/
+- Flask-SQLAlchemy -> https://flask-sqlalchemy.readthedocs.io/en/stable/
+- Flask-Migrate -> https://flask-migrate.readthedocs.io/en/latest/
+- App Factory Pattern (Portuguese) -> https://www.youtube.com/watch?v=-qWySnuoaTM&t=5821s
